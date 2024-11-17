@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    #app-wrapper {
+        @apply flex flex-col min-h-screen;
+    }
+
+    main {
+        @apply flex-grow;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply rounded-md bg-black disabled:opacity-50 disabled:pointer-events-none px-3.5 md:px-7 py-2.5 text-center text-sm inline-flex font-semibold text-white shadow-sm focus-visible:outline hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors focus-visible:outline-black;
+    }
+
+    p {
+        @apply leading-relaxed mt-2 first:mt-0;
+    }
+
+    p a[href] {
+        @apply underline hover:no-underline;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

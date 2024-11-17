@@ -1,0 +1,82 @@
+.editor-text {
+    :global {
+        ul {
+            @apply list-disc;
+        }
+
+        ul,
+        ol {
+            @apply pl-5 mt-4 mb-8 last:mb-0;
+
+            li {
+                @apply mt-3;
+            }
+        }
+
+        ul ul {
+            @apply mb-2;
+        }
+
+        ul:first-child,
+        ul ul {
+            @apply mt-0;
+        }
+
+        ol {
+            @apply list-decimal;
+        }
+
+        ol:first-child,
+        ol ol {
+            @apply mt-0;
+        }
+
+        ol ol {
+            @apply mb-2;
+            list-style-type: lower-latin;
+        }
+
+        h1,
+        .h1 {
+            @apply text-h1;
+        }
+
+        h2,
+        .h2 {
+            @apply text-h2;
+        }
+
+        h3,
+        .h3 {
+            @apply text-h3;
+        }
+
+        h4,
+        .h4 {
+            @apply text-h4;
+        }
+
+        h1,
+        .h1,
+        h2,
+        .h2,
+        h3,
+        .h3,
+        h4,
+        .h4,
+        h5,
+        .h5,
+        h6,
+        .h6 {
+            @apply font-bold tracking-tight leading-tight text-ellipsis overflow-hidden mt-[1em] first:mt-0;
+
+            & + p {
+                @apply mt-4;
+            }
+        }
+
+        .ck-anchor {
+            @apply scroll-mt-12;
+        }
+    }
+}

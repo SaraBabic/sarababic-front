@@ -1,0 +1,41 @@
+image: node
+
+variables:
+  RSYNC: rsync -rtqx --links --safe-links --chmod=Du=rwx,Dgo=rx,Fu=rw,Fog=r --delete
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - deploy
+
+#####################
+#### DEPLOY STAGING #####
+#####################
+deploy_staging:
+  stage: deploy
+  script:
+    - DEPLOYMENT_URL=$(npx vercel --token=$VERCEL_TOKEN --yes)
+    - npx vercel alias set $DEPLOYMENT_URL $STAGING_DOMAIN --token=$VERCEL_TOKEN --scope=intention-development
+  environment:
+    name: staging
+    url: https://$STAGING_DOMAIN
+  only:
+    - develop
+    - /^release\/.+$/
+
+#####################
+#### DEPLOY PRODUCTION #####
+#####################
+deploy_prod:
+  stage: deploy
+  script:
+    - DEPLOYMENT_URL=$(npx vercel --token=$VERCEL_TOKEN --yes --prod --skip-domain) # Skip Domain assignment and assign manually to avoid overwrite for staging domains
+    - npx vercel alias set $DEPLOYMENT_URL $PRODUCTION_DOMAIN --token=$VERCEL_TOKEN --scope=intention-development
+  environment:
+    name: production
+    url: https://$PRODUCTION_DOMAIN
+  when: manual
+  only:
+    - master
