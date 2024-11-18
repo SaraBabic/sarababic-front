@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="container mx-auto px-8">
                 <footer aria-labelledby="footer-heading">
                     <h2 id="footer-heading" className="sr-only">
-                        Footer
+                        Footer test
                     </h2>
                     <div className="mx-auto">
                         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:justify-between lg:items-center">
