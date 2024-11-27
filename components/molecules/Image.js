@@ -6,6 +6,7 @@ import cn from 'classnames';
 import { inView, animate } from 'motion';
 
 const Image = ({
+    image,
     focalPoint,
     layout = 'responsive',
     loading = 'lazy',
@@ -19,8 +20,10 @@ const Image = ({
     mimeType,
     animation = false,
     className,
+    fill,
     ...rest
 }) => {
+    // console.log('SARA ::: ', image);
     const [ready, setReady] = useState(false);
     const imageRef = useRef();
     const props = {};
@@ -44,7 +47,7 @@ const Image = ({
     };
 
     const objectPosition = layout === 'fill' ? getObjectPosition() : null;
-    const objectFit = layout === 'fill' ? 'cover' : null;
+    const objectFit = layout === 'fill' ? 'cover' : '';
 
     /**
      * Handle fade in
@@ -87,7 +90,15 @@ const Image = ({
                     })}
                 >
                     {mimeType === 'image/svg+xml' ? (
-                        <img src={imageSrc} onLoad={handleLoad} loading={loading} alt={alt || ''} />
+                        <img
+                            src={imageSrc}
+                            className={cn(className, {
+                                'scale-125 origin-center': loading === 'eager',
+                            })}
+                            onLoad={handleLoad}
+                            loading={loading}
+                            alt={alt || ''}
+                        />
                     ) : (
                         <NextImage
                             ref={imageRef}
