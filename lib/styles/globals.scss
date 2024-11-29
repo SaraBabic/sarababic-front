@@ -14,6 +14,40 @@
     main {
         @apply flex-grow;
     }
+    p {
+        @apply propToFluid-[font-size_18_24];
+    }
+
+    h1,
+    .h1 {
+        @apply propToFluid-[font-size_44_64];
+        hyphens: auto;
+    }
+
+    h2,
+    .h2 {
+        @apply propToFluid-[font-size_36_52];
+    }
+
+    h3,
+    .h3 {
+        @apply propToFluid-[font-size_32_40];
+    }
+
+    h4,
+    .h4 {
+        @apply propToFluid-[font-size_24_32];
+    }
+
+    h5,
+    .h5 {
+        @apply propToFluid-[font-size_16_18];
+    }
+
+    h6,
+    .h6 {
+        @apply propToFluid-[font-size_12_16];
+    }
 }
 
 @layer components {

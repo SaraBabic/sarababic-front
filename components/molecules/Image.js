@@ -23,7 +23,6 @@ const Image = ({
     fill,
     ...rest
 }) => {
-    // console.log('SARA ::: ', image);
     const [ready, setReady] = useState(false);
     const imageRef = useRef();
     const props = {};
