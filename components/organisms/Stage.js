@@ -13,9 +13,9 @@ const Stage = ({ stageImage, stageText, stageHeadline, skyline }) => {
                     {stageText ? <EditorText className="mt-6" content={stageText} /> : null}
                 </div>
             </div>
-            {Array.isArray(stageImage) && stageImage?.length ? (
+            {stageImage ? (
                 <div className="relative w-full aspect-[2/1] md:aspect-[3/1] xl:aspect-auto overflow-hidden">
-                    <Image animation {...stageImage?.[0]} loading="eager" className="min-h-[17rem]" layout="fill" />
+                    <Image animation {...stageImage} loading="eager" className="min-h-[17rem]" layout="fill" />
                 </div>
             ) : null}
         </div>
