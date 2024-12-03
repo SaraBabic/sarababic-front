@@ -8,6 +8,7 @@ import AppContext from '@/lib/context/app';
 import Image from '../molecules/Image';
 import Headline from '../atoms/Headline';
 import Text from '../atoms/EditorText/EditorText';
+import Container from './Layout/Container';
 
 const EntryList = ({ entriesData, entryType, limit = 3 }) => {
     const { appState } = useContext(AppContext);
@@ -28,9 +29,9 @@ const EntryList = ({ entriesData, entryType, limit = 3 }) => {
     );
 
     return (
-        <>
+        <Container>
             {Array.isArray(entries) ? (
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 border-t border-black pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:grid-cols-3">
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:grid-cols-3">
                     {entries?.map((entry) => {
                         const date = entry?.postDate ? new Date(entry.postDate) : null;
 
@@ -80,7 +81,7 @@ const EntryList = ({ entriesData, entryType, limit = 3 }) => {
                     })}
                 </div>
             ) : null}
-        </>
+        </Container>
     );
 };
 
