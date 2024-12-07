@@ -1,5 +1,5 @@
 import React from 'react';
-import Stage from '../organisms/Stage';
+import Stage from '../organisms/Stage/Stage';
 
 const News = ({ entry, children }) => {
     const { stageImage, stageText, stageHeadline, postDate, title } = entry;

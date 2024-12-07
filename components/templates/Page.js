@@ -1,5 +1,5 @@
 import React from 'react';
-import Stage from '../organisms/Stage';
+import Stage from '../organisms/Stage/Stage';
 import Container from '../organisms/Layout/Container';
 
 const Page = ({ entry, children }) => {
