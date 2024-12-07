@@ -1,0 +1,61 @@
+.Home {
+    a {
+        display: block;
+        text-indent: -9999px;
+        background-image: url(/icons/home.svg);
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: center;
+        white-space: nowrap;
+        height: 24px;
+        width: 24px;
+        &:hover {
+            background-color: unset;
+            background-image: url(/icons/home.svg);
+        }
+        &:active {
+            background-color: unset;
+            background-image: url(/icons/home.svg);
+        }
+        @screen maxNav {
+            height: unset;
+        }
+    }
+    &:hover {
+        background-color: unset;
+    }
+}
+.childrenContainer {
+    display: none;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    @screen lg {
+        display: unset;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+}
+
+.childrenContainerOpen {
+    display: block;
+    z-index: -1;
+    opacity: 1;
+    @screen lg {
+        display: unset;
+        z-index: -1;
+        transform: translateY(109px);
+        opacity: 1;
+    }
+}

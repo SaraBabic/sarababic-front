@@ -70,7 +70,7 @@ const EntryList = ({ entriesData, entryType, limit = 3 }) => {
 
                                 <div className="mt-8 flex font-semibold">
                                     <Link href={`/${entry?.uri}/`} className="text-sm group hover:text-black">
-                                        Zum Artikel{' '}
+                                        Read more{' '}
                                         <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
                                             &rarr;
                                         </span>

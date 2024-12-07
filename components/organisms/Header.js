@@ -1,4 +1,4 @@
-import MainNavigation from './MainNavigation';
+import MainNavigation from './MainNavigation/MainNavigation';
 import Logo from '../molecules/Logo';
 
 export default function Header() {
