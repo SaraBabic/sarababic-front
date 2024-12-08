@@ -3,7 +3,7 @@ import FooterNavigation from './FooterNavigation';
 
 export default function Footer() {
     return (
-        <footer className="mt-20 xl:mt-40 py-16 lg:px-8">
+        <footer className="mt-20 xl:mt-40 py-16 lg:px-8 bg-black text-white">
             <div className="container mx-auto px-8">
                 <footer aria-labelledby="footer-heading">
                     <h2 id="footer-heading" className="sr-only">

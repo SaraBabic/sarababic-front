@@ -5,6 +5,7 @@ const themeConfig = require('./lib/styles/theme');
 
 module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
+    safelist: ['bg-white', 'bg-black'],
     theme: themeConfig,
     plugins: [
         plugin(function ({ addBase, addComponents, addUtilities, matchUtilities, theme }) {
