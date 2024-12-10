@@ -55,12 +55,16 @@ const EntryList = ({ entriesData, entryType, limit = 3 }) => {
                                             })}
                                         </div>
                                     ) : null}
-
                                     <div className="mt-3 text-lg">
                                         <div>
                                             <Headline className="text-lg" headlineLevel={3} content={entry.headline || entry.title} />
                                         </div>
                                     </div>
+                                    {entry?.blogType[0] ? (
+                                        <p className={`bg-${entry?.blogType[0]?.categoryColor} w-fit p-[2px_16px] text-[12px] rounded-md text-white`}>
+                                            {entry?.blogType[0]?.title}
+                                        </p>
+                                    ) : null}
                                     {entry.excerpt ? (
                                         <div className="mt-5 line-clamp-3 text-sm">
                                             <Text content={entry.excerpt} />
