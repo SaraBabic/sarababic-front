@@ -1,37 +1,6 @@
-.polygon {
-    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 0);
-}
-
-.marquee {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    margin-top: 16px;
-}
-
-.marqueeInner {
-    display: flex;
-    width: 200%;
-    animation: marquee 20s linear infinite;
-    div {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.marqueeInner img {
-    width: 72px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
+.stage {
+    img {
+        position: unset !important;
+        width: auto !important;
     }
 }

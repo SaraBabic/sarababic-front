@@ -60,7 +60,7 @@ const EntryList = ({ entriesData, entryType, limit = 3 }) => {
                                             <Headline className="text-lg" headlineLevel={3} content={entry.headline || entry.title} />
                                         </div>
                                     </div>
-                                    {entry?.blogType[0] ? (
+                                    {entry?.blogType?.length > 0 ? (
                                         <p className={`bg-${entry?.blogType[0]?.categoryColor} w-fit p-[2px_16px] text-[12px] rounded-md text-white`}>
                                             {entry?.blogType[0]?.title}
                                         </p>
