@@ -22,7 +22,7 @@ const Page = ({ linktext, page, href, newWindow, linkLayout = 'default' }) => {
                     href={linkURL}
                     target={newWindow ? '_blank' : null}
                     className={cn({
-                        'outline-none text-sm font-semibold leading-6 transition-colors': linkLayout === 'default',
+                        'outline-none text-sm font-semibold leading-6 transition-colors underlinan cen': linkLayout === 'default',
                         btn: linkLayout === 'button',
                     })}
                 >

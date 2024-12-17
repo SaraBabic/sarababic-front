@@ -82,3 +82,32 @@ h6 {
         text-wrap: balance;
     }
 }
+
+.underlinan {
+    display: inline-block;
+    position: relative;
+}
+
+.underlinan::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e61039;
+    transition: transform 0.25s ease-out;
+}
+
+.underlinan:hover::after {
+    transform: scaleX(1);
+}
+
+.underlinan.cen::after {
+    transform-origin: bottom center;
+}
+
+.underlinan.cen:hover::after {
+    transform-origin: bottom center;
+}

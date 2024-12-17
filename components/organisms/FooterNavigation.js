@@ -14,7 +14,7 @@ const FooterNavigation = () => {
     const { appState } = useContext(AppContext);
 
     return (
-        <nav className="grid grid-cols-2 gap-8 mr-auto lg:ml-auto lg:mr-0" aria-label="Footer">
+        <nav className="flex gap-4 justify-end" aria-label="Footer">
             {appState.footerNavigation?.map((item) => {
                 const LINK_DATA = item?.linkItem?.[0];
                 const ITEM_COMP = NAV_ITEM_TYPES[LINK_DATA?.typeHandle];
