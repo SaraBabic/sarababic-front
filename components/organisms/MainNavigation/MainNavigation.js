@@ -81,7 +81,7 @@ const MainNavigationItem = ({ item, currentSection, onClick, depth = 0 }) => {
         <div
             ref={submenuRef}
             className={cn('mt-4 lg:mt-0 group parentLink', {
-                activeMenuItem: isActive,
+                'text-primary activeMenuItem': isActive,
                 [styles.Home]: isHome,
                 [`depth-${depth}`]: depth,
             })}
