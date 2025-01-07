@@ -40,7 +40,7 @@ const AccordionItem = ({ uid, headline, text, activeItems, setActiveItems, curre
     }, []);
 
     return (
-        <div className={`p-[14px_22px_22px_22px] ${currentlyActive ? 'bg-primary-300 text-primary' : 'bg-primary-300 text-seeViolet'}`}>
+        <div className={` rounded-md p-[14px_22px_22px_22px] ${currentlyActive ? 'bg-primary-50 text-primary' : 'bg-primary-50 text-seeViolet'}`}>
             <dt>
                 <button
                     className={`flex w-full items-start gap-[16px] text-left hover:text-primary transition-colors cursor-pointer hover:text-brandGreen ${
@@ -73,12 +73,12 @@ const AccordionItem = ({ uid, headline, text, activeItems, setActiveItems, curre
                     >
                         {currentlyActive ? <ChevronDownIcon className="h-6 w-6" aria-hidden="true" /> : <ChevronDownIcon className="h-6 w-6" aria-hidden="true" />}
                     </span>
-                    {headline ? <span className={`text-base leading-7 font-[700] text-[18px]`}>{headline}</span> : null}
+                    {headline ? <span className={`text-base leading-7 font-[700] text-[22px] orbiton`}>{headline}</span> : null}
                 </button>
             </dt>
             {text ? (
                 <dd className="overflow-hidden h-0" ref={itemContentWrapperRef}>
-                    <div className="p-[8px_22px_22px_42px] text-base leading-7 editor-text smallText" ref={itemContentRef} dangerouslySetInnerHTML={{ __html: text }} />
+                    <div className="p-[8px_22px_22px_42px] text-[16px] leading-7 " ref={itemContentRef} dangerouslySetInnerHTML={{ __html: text }} />
                 </dd>
             ) : null}
         </div>
